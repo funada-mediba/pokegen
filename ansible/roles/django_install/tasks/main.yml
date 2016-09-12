@@ -1,2 +1,3 @@
 #vagrant@Akihiro:~$ sudo apt-get install python-dev python-pip
 #vagrant@Akihiro:~$ sudo pip install django uwsgi
+#a
