@@ -1,0 +1,16 @@
+- apt_repository: repo='deb http://ftp.jp.debian.org/debian jessie-backports main' state=present
+- apt: pkg=nginx-extras default_release=jessie-backports state=latest
+
+## Self-Signed SSL
+- file: state=directory path=/etc/nginx/ssl
+- shell: openssl req -new -nodes -x509 -subj "/CN={{ DOMAIN }}" -days 3650 -keyout /etc/nginx/ssl/server.key -out /etc/nginx/ssl/server.crt -extensions v3_ca creates=/etc/nginx/ssl/server.crt
+
+## /var/www/html
+- command: test -f /var/www/html/health_check.html
+  register: result
+  ignore_errors: true
+- copy: src=health_check.html dest=/var/www/html/health_check.html owner=www-data mode=0666
+  when: result|failed
+
+## /var/log/nginx
+- file: state=directory path=/var/log/nginx owner=www-data mode=0755

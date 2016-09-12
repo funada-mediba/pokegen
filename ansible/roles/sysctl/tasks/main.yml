@@ -1,0 +1,6 @@
+- sysctl: name=net.ipv4.tcp_tw_reuse value=1 state=present
+- sysctl: name=net.ipv4.tcp_tw_recycle value=1 state=present
+- sysctl: name=net.ipv4.tcp_fin_timeout value=15 state=present
+- sysctl: name=net.core.somaxconn value=1024 state=present
+- sysctl: name=net.ipv4.ip_local_port_range value="1024 65000" state=present
+- sysctl: name=net.ipv4.tcp_syncookies value=0 state=present

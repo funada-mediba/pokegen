@@ -1,0 +1,15 @@
+## Nginx Configs
+- template: src=nginx.conf.j2 dest=/etc/nginx/nginx.conf
+- template: src=default.j2 dest=/etc/nginx/sites-available/default
+
+## /var/cache/nginx
+- file: state=directory path=/var/cache/nginx owner=www-data mode=0775
+- file: state=directory path=/var/cache/nginx/proxy owner=www-data mode=0775
+- file: state=directory path=/var/cache/nginx/fastcgi owner=www-data mode=0775
+
+## /var/log/nginx
+- file: state=directory path=/var/log/nginx/archive owner=www-data mode=0775
+- copy: src=logrotate dest=/etc/logrotate.d/nginx mode=0644
+
+## Restart Nginx
+- service: name=nginx state=restarted

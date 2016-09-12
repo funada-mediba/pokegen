@@ -1,0 +1,10 @@
+---
+- hosts: all
+  sudo: true
+  tasks:
+  roles:
+    - common
+    - sysctl
+    - nginx_install
+    - nginx_config
+    - django_install

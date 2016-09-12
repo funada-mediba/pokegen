@@ -1,0 +1,31 @@
+- hostname: name={{ inventory_hostname }}
+- template: src=hosts.j2 dest=/etc/hosts
+- apt: update_cache=yes
+- apt: pkg={{ item }} state=latest
+  with_items:
+    - git
+    - vim
+    - curl
+    - telnet
+    - dnsutils
+    - unzip
+    - chrony
+    - tmpreaper
+    - emacs-nox
+
+- copy: content='Asia/Tokyo' dest=/etc/timezone
+  register: change_timezone
+
+- command: dpkg-reconfigure --frontend noninteractive tzdata
+  when: change_timezone.changed
+
+- service: name=rsyslog enabled=yes state=restarted
+  when: change_timezone.changed
+
+- service: name=cron enabled=yes state=restarted
+  when: change_timezone.changed
+
+- locale_gen: name=ja_JP.UTF-8 state=present
+- copy: content='LANG=ja_JP.UTF-8' dest=/etc/default/locale
+
+- copy: src=tmpreaper.conf dest=/etc/tmpreaper.conf
