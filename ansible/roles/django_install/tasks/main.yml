@@ -1,13 +1,9 @@
-
 - apt: pkg=python-dev state=latest
 - apt: pkg=python-pip state=latest
 
-# Install (Bottle) python package.
 - pip: name=django
 - pip: name=uwsgi
 
-# - command: django-admin startproject myweb
-# - command: cd myweb
 
 # - command: pip.exe install  git+https://github.com/tejado/pgoapi.git
 # - command: git clone https://github.com/tejado/pgoapi.git
