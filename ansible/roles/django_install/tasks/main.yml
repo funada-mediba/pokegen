@@ -1,2 +1,11 @@
-#vagrant@Akihiro:~$ sudo apt-get install python-dev python-pip
-#vagrant@Akihiro:~$ sudo pip install django uwsgi
+- apt: pkg=python-dev state=latest
+- apt: pkg=python-pip state=latest
+
+- pip: name=django
+- pip: name=uwsgi
+
+
+# - command: pip.exe install  git+https://github.com/tejado/pgoapi.git
+# - command: git clone https://github.com/tejado/pgoapi.git
+# - command: cd pgoapi
+# - command: python setup.py install
