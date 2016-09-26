@@ -1,0 +1,4 @@
+- apt: pkg=python-six default_release=jessie-backports state=latest
+- command: git clone https://github.com/tejado/pgoapi.git chdir=/usr/local/src/ creates=/usr/local/src/pgoapi
+- pip: name='file:///usr/local/src/pgoapi'
+- command: python setup.py install chdir=/usr/local/src/pgoapi

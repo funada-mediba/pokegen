@@ -8,3 +8,4 @@
     - nginx_install
     - nginx_config
     - django_install
+    - pgoapi_install
