@@ -3,9 +3,3 @@
 
 - pip: name=django
 - pip: name=uwsgi
-
-
-# - command: pip.exe install  git+https://github.com/tejado/pgoapi.git
-# - command: git clone https://github.com/tejado/pgoapi.git
-# - command: cd pgoapi
-# - command: python setup.py install
