@@ -1,1 +1,4 @@
 vagrant/.vagrant
+*.pyc
+.DS_Store
+
