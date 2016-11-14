@@ -1,0 +1,154 @@
+{
+  "status_code": 1,
+  "responses": {
+    "GET_INVENTORY": {
+      "inventory_delta": {
+        "inventory_items": [
+          {
+            "inventory_item_data": {
+              "pokedex_entry": {
+                "times_captured": 1,
+                "times_encountered": 1,
+                "pokemon_id": 118
+              }
+            }
+          },
+          {
+            "inventory_item_data": {
+              "pokemon_data": {
+                "move_1": 220,
+                "move_2": 101,
+                "captured_cell_id": 6924437638467289000,
+                "pokemon_id": 4,
+                "creation_time_ms": 1474884338377,
+                "height_m": 0.6145961880683899,
+                "stamina_max": 10,
+                "weight_kg": 9.821643829345703,
+                "individual_defense": 10,
+                "cp_multiplier": 0.09399999678134918,
+                "stamina": 10,
+                "individual_stamina": 10,
+                "individual_attack": 10,
+                "cp": 12,
+                "id": 699487567177115100
+              }
+            }
+          },
+          {
+            "inventory_item_data": {
+              "item": {
+                "item_id": 1,
+                "count": 62
+              }
+            }
+          },
+          {
+            "inventory_item_data": {
+              "player_stats": {
+                "pokemons_captured": 2,
+                "km_walked": 0.1473531424999237,
+                "level": 2,
+                "experience": 1260,
+                "pokemons_encountered": 3,
+                "pokeballs_thrown": 1,
+                "unique_pokedex_entries": 2,
+                "next_level_xp": 3000,
+                "pokemon_caught_by_type": "AAAAAAAAAAAAAAABAAAAAAAAAA==",
+                "poke_stop_visits": 1
+              }
+            }
+          },
+          {
+            "inventory_item_data": {
+              "candy": {
+                "family_id": 4,
+                "candy": 3
+              }
+            }
+          },
+          {
+            "inventory_item_data": {
+              "candy": {
+                "family_id": 118,
+                "candy": 3
+              }
+            }
+          },
+          {
+            "inventory_item_data": {
+              "pokemon_data": {
+                "move_1": 216,
+                "move_2": 58,
+                "captured_cell_id": 6924437259198398000,
+                "pokeball": 1,
+                "pokemon_id": 118,
+                "creation_time_ms": 1474884419108,
+                "height_m": 0.5387961268424988,
+                "stamina_max": 10,
+                "weight_kg": 8.530950546264648,
+                "individual_defense": 6,
+                "cp_multiplier": 0.09399999678134918,
+                "stamina": 10,
+                "individual_stamina": 14,
+                "individual_attack": 12,
+                "cp": 12,
+                "id": 3886762613367957500
+              }
+            }
+          },
+          {
+            "inventory_item_data": {
+              "egg_incubators": {
+                "egg_incubator": [
+                  {
+                    "item_id": 901,
+                    "incubator_type": 1,
+                    "id": "EggIncubatorProto5114916705326322979"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "inventory_item_data": {
+              "pokedex_entry": {
+                "times_encountered": 1,
+                "pokemon_id": 1
+              }
+            }
+          },
+          {
+            "inventory_item_data": {
+              "item": {
+                "item_id": 401,
+                "count": 2,
+                "unseen": true
+              }
+            }
+          },
+          {
+            "inventory_item_data": {
+              "item": {
+                "item_id": 901,
+                "count": 1,
+                "unseen": true
+              }
+            }
+          },
+          {
+            "inventory_item_data": {
+              "pokedex_entry": {
+                "times_captured": 1,
+                "times_encountered": 1,
+                "pokemon_id": 4
+              }
+            }
+          }
+        ],
+        "new_timestamp_ms": 1475831386689
+      },
+      "success": true
+    }
+  },
+  "request_id": 935125319075031300
+}

@@ -7,5 +7,5 @@
     - sysctl
     - nginx_install
     - nginx_config
-    - pgoapi_install
     - django_install
+    - pgoapi_install

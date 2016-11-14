@@ -1,4 +1,60 @@
-aaaa
-aaaa
-aa
-aaaa
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pokegen</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<script>
+	$(function(){
+		pgoapi_get();
+
+		$("#bt").click(function () {
+			$("#caver").fadeOut();
+		});
+  	});
+	</script>
+	<script type='text/javascript' src='./js/pgoapi-get.js'></script>
+</head>
+<body class="light-grey content" style="max-width:1600px">
+	<div id="caver">
+		<div class="login">
+			<h1>ぽけげん！</h1>
+			<form action="index.html" method="post">
+				<input type="email" name="gmail" placeholder="e-mail" required="required" />
+				<input type="password" name="pass" placeholder="Password" required="required" />
+				<button type="submit" id="bt" class="btn btn-primary btn-block btn-large">Let me in.</button>
+			</form>
+		</div>
+	</div>
+<nav class="sidenav collapse white animate-left" style="z-index:3;width:300px;" id="mySidenav"><br>
+  <div class="container">
+    <!-- <a href="#" onclick="close()" class="hide-large right jumbo padding" title="close menu"> -->
+      <!-- <i class="fa fa-remove"></i> -->
+    </a>
+    <img src="/images/avatar_g2.jpg" style="width:45%;" class="round"><br><br>
+    <h4 class="padding-0"><b>test</b></h4>
+    <p class="text-grey level-put"><!-- level入力 --></p>
+  </div>
+  <p class="padding">並び替え</p>
+  <p class="padding">絞り込み</p>
+  <!-- <p class="padding">博士に送る</p> -->
+</nav>
+
+<div class="main" style="margin-left:300px">
+
+  <header class="container" id="portfolio" style="margin-bottom:56px;">
+    <a href="#"><img src="/images/avatar_g2.jpg" style="width:65px;" class="circle right margin hide-large hover-opacity"></a>
+	<h4 class="right margin hide-large"><b>test</b><br><span class="level-put"><!-- level入力 --></span></h4>
+    <!-- <h1><b>ぽけげん！</b></h1> -->
+  </header>
+
+	<div class="row-padding">
+	</div>
+	<!-- <div class="black center padding-24">Powered by <a href="#" title="funada.akihiro" target="_blank" class="hover-opacity">funada.akihiro</a></div> -->
+</div>
+</body>
+</html>
