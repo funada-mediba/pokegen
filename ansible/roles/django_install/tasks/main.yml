@@ -1,5 +1,7 @@
 - apt: pkg=python-dev state=latest
-- apt: pkg=python-pip state=latest
+
+- get_url: url=https://bootstrap.pypa.io/get-pip.py dest=/usr/local/src/get-pip.py
+- shell: python /usr/local/src/get-pip.py
 
 - pip: name=django
 - pip: name=uwsgi
