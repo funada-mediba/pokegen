@@ -70,8 +70,6 @@ function pgoapi_get(){
 		data: {
 		"mail": $("#mail").val(),
 		"pass": $("#pass").val()
-		// "mail": "kaihatu.pgo@gmail.com",
-		// "pass": "pokemongo_kaihatu"
 		},
         success: function (json) {
             $(json[0].responses.GET_INVENTORY.inventory_delta.inventory_items).each(function(index,obj){
