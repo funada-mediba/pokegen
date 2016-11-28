@@ -1,21 +1,21 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 from pgoapi import pgoapi
 from pgoapi import utilities as util
 import pprint
 import json
 
+@csrf_exempt
 def main(request):
-
     api = pgoapi.PGoApi()
-    position = util.get_pos_by_name("shibuya")
 
-    api.set_position(*position)
+    mail = request.POST["mail"]
+    passwd = request.POST["pass"]
 
-    if not api.login("google", "kaihatu.pgo@gmail.com", "pokemongo_kaihatu", app_simulation = True):
+    api.set_position(35.6602577, 139.6899648, 0)
+    if not api.login("google", mail, passwd, app_simulation = True):
         return
+    response_dict = [api.get_inventory(),api.get_player()]
 
-    response_dict = api.get_inventory()
-    # print('Response dictionary (get_player): \n\r{}'.format(pprint.PrettyPrinter(indent=4).pformat(response_dict)))
-
-    return HttpResponse(json.dumps(response_dict))
+    return HttpResponse(json.dumps(response_dict), content_type="application/json")
